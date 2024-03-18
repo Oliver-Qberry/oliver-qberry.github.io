@@ -160,7 +160,7 @@ function start(){
         note_input.placeholder = input_notes.name;
         high_score = parseInt(JSON.parse(localStorage.getItem('highScore')));
         // If no saved highscore set it to 0
-        if(high_score.isNaN){
+        if(isNaN(high_score)){
             high_score = 0;
         }
         high_score_display.textContent = `High Score: ${high_score}`;
