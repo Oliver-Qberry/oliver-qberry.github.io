@@ -159,6 +159,10 @@ function start(){
         not_given_title.textContent = input_notes.name;
         note_input.placeholder = input_notes.name;
         high_score = parseInt(JSON.parse(localStorage.getItem('highScore')));
+        // If no saved highscore set it to 0
+        if(high_score.isNaN()){
+            high_score = 0;
+        }
         high_score_display.textContent = `High Score: ${high_score}`;
         getRandom();
     }
