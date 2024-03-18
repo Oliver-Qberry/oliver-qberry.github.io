@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Transposing</title>
+    <link rel="icon" type="image/x-icon" href="./note.png">
+    <link rel="stylesheet" href="./base.css">
+</head>
+
+<body>
+    <div class="select">
+        <div class="given">
+            <h1>Given note</h1>
+            <input type="checkbox" id="concert_given" name="concert_given">
+            <label for="concert_given">Concert Pitch</label><br>
+            <input type="checkbox" id="b_flat_given" name="b_flat_given">
+            <label for="b_flat_given">Bb</label><br>
+            <input type="checkbox" id="e_flat_given" name="e_flat_given">
+            <label for="e_flat_given">Eb</label><br>
+        </div>
+        <div class="not-given">
+            <h1>Transposing to</h1>
+            <input type="checkbox" id="concert_not_given" name="concert_not_given">
+            <label for="concert_not_given">Concert Pitch</label><br>
+            <input type="checkbox" id="b_flat_not_given" name="b_flat_not_given">
+            <label for="b_flat_not_given">Bb</label><br>
+            <input type="checkbox" id="e_flat_not_given" name="e_flat_not_given">
+            <label for="e_flat_not_given">Eb</label><br>
+        </div>
+    </div>
+    <button class="next">Next</button>
+    <div class="practice" hidden="true">
+        <div class="columns">
+            <div class="given_practice">
+                <h1 class="given_title">Concert pitch</h1>
+                <h2 class="given_note_output"></h2>
+            </div>
+            <div class="not_given_practice">
+                <h1 class="b_flat">Bb</h1>
+                <input type="string" class="input" placeholder="Bb">
+            </div>
+        </div>
+        <h3 class="score">Correct: 0</h3>
+        <h3 class="averageTime">Average Time: 0.0s</h3>
+        <h3 class="high_score">High Score: 0</h3>
+    </div>
+    
+    <script type="module" src="./index.js"></script>
+    <style>
+        /*.titles, .notes{
+            display: grid;
+            grid-template-rows: repeat(auto-fit, minmax(260px, 1fr));
+            grid-gap: 20px;
+            padding: 2rem;
+        }*/
+
+        .columns{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-gap: 20px;
+            padding: 2rem;
+        }
+        .select{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-gap: 20px;
+            padding: 2rem;
+            align-items: center;
+        }
+        label{
+            color: black;
+            margin-top: 0;
+            line-height: 1;
+            text-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+            font-size: 40px;
+        }
+        [type="checkbox"]{
+            width: 25px;
+            height: 25px;
+        }
+        .next{
+            margin: 10px;
+        }
+    </style>
+</body>
+
+</html>
